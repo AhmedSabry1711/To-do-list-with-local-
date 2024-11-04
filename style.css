@@ -1,0 +1,149 @@
+body {
+
+    background-image: linear-gradient(to bottom right,rgb(56, 56, 152),lightblue);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* مركزية المحتوى */
+    justify-content: center; /* مركزية عمودية */
+    height: 100vh; /* ملء الشاشة */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط جديد */
+    color: #333; /* لون النص الأساسي */
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px; /* مساحة أسفل النموذج */
+}
+
+.task-field {
+    width: 300px;
+    height: 50px;
+    border-radius: 25px; /* جعل الزوايا أكثر نعومة */
+    background-color: #ffffff; /* لون خلفية نقي لحقل الإدخال */
+    padding: 0 15px; /* إضافة padding */
+    border: 1px solid #80deea; /* إطار خفيف */
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+}
+
+.butt {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px; /* جعل الزوايا أكثر نعومة */
+    background-color: #00796b; /* لون زر مريح */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.butt:hover {
+    background-color: #004d40; /* لون مختلف عند التمرير */
+}
+
+ul {
+
+    margin: 20px; /* مساحة حول القائمة */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* مركزية العناصر */
+    padding: 0;
+    width: 100%; /* توسيع القائمة */
+}
+
+li {
+    background: #ffffff;
+    margin: 5px 0;
+    padding: 15px; /* زيادة padding لراحة أكبر */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px; /* عرض ثابت للعناصر */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+}
+
+.list{
+
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.deldelete, .check-button {
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deldelete {
+    border: 1px solid rgba(155, 39, 39, 0.884) ;
+    background-color:rgba(155, 39, 39, 0.884); /* لون الزر الأحمر */
+}
+
+.deldelete:hover {
+    border: 1px solid white;
+
+    background-color:white; 
+    color: black;
+}
+
+.check-button {
+    border: 1px solid #00796b;
+    background-color:#00796b; /* لون الزر الأخضر */
+}
+
+.check-button:hover {
+    border: 1px solid #004d40;
+    background-color: #004d40; /* لون مختلف عند التمرير */
+}
+
+/* تأثير الكتابة */
+.typing-animation {
+    font-size: 24px; /* حجم النص المتحرك */
+    color: #282033da; /* لون النص المتحرك */
+    white-space: nowrap; /* عدم التفاف النص */
+    overflow: hidden; /* إخفاء النص الزائد */
+    border-right: 4px solid; /* إضافة خط يمين للنص */
+    animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite;
+    margin-bottom: 20px; /* مساحة أسفل النص */
+    font-weight: bold; /* جعل النص غامق */
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    25% { width: 100%; }
+    50% { width: 100%; }
+    75% { width: 0; }
+    100% { width: 0; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+@media (max-width: 600px) {
+    .task-field {
+        width: 80%; /* عرض متجاوب */
+    }
+
+    .butt {
+        width: 40px; /* حجم أصغر للأزرار */
+        height: 40px;
+    }
+
+    li {
+        width: 90%; /* عرض متجاوب للعناصر */
+    }
+}
